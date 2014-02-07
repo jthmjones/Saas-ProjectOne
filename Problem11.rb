@@ -12,11 +12,20 @@ class CartesianProduct
         @cartesian_array.push(tmp_array)
       end
     end
+    #returning the last thing done
     @cartesian_array
   end
 
   def each
+    #yield?
     @cartesian_array.each { |index| yield(index) }
   end
 
 end
+a = [nil, 1, 2, 3, 4, 5]
+b = [nil, 1, 2, 3, 4, 5]
+c = CartesianProduct.new(a, b)
+
+p  c.each{|elt| elt.inspect}
+# c.each{|elt| puts elt.inspect}
+

@@ -1,7 +1,8 @@
 def combine_anagrams(words)
 	#Do not need return or the variable
+	#group_by{ |obj| block} -> hash
 	tuples = words.group_by{|word| word.chars.sort{ |a , b| a.casecmp(b) }.join}.values
-	return tuples
+	#return tuples
 	
 end
 

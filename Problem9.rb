@@ -18,5 +18,5 @@ class Numeric
   end
 end
 
-print 5.dollars.in(:euros)
-print 10.euros.in(:rupees)
+p 5.dollars.in(:euros)
+p 10.euros.in(:rupees)

@@ -28,5 +28,7 @@ end
 
 dessert1=Dessert.new("icecream",200)
 dessert2=JellyBean.new("icecream",0,"black licorice")
-print dessert2.delicious?
+puts dessert2.delicious?
+puts dessert1.delicious?
+
 #print dessert2.healthy?

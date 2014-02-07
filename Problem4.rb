@@ -1,12 +1,15 @@
 # part4a
 # rock paper scissors lizard spock!!
 # ref Irakli student 
+
+#defines a new exception subclass 
 class WrongNumberOfPlayersError <  StandardError ; end
 class NoSuchStrategyError <  StandardError ; end
 def rps_game_winner(game)
 
     raise WrongNumberOfPlayersError unless game.length == 2
 	raise NoSuchStrategyError unless (["R", "P", "S"].include?(game[0][1]) && ["R", "P", "S"].include?(game[1][1]))
+    
   	m1 = game[0][1]
   	m2 = game[1][1]
   	winner = 0
@@ -28,6 +31,10 @@ def rps_game_winner(game)
 end
 
 puts rps_game_winner([ ["Armando", "P"], ["Dave", "S"] ])
+#this will raise WrongNumberOfPlyersError
+#puts rps_game_winner([ ["Armando", "P"] ])
+#this will raise NoSuchStrategyError
+#puts rps_game_winner([ ["Armando", "Spock"], ["Dave", "Lizard"] ])
 
 #part4b
 #ref stack overflow
